@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 import StudentRoute from "./Routes/StudentRoute.js";
 import cors from "cors";
 import TeacherRoute from "./Routes/TeacherRoute.js";
-import DBString from "./ConnectionString.js";
+
 import bodyParser from "body-parser";
 
 const PORT = 3005;
@@ -21,6 +21,6 @@ app.listen(PORT, () => {
   console.log(`Listening on port ${PORT}`);
 });
 
-mongoose.connect(DBString).then(() => {
+mongoose.connect("mongodb+srv://boorgusiddharth:siddharthjuly99@siddharth.fiuilki.mongodb.net/?retryWrites=true&w=majority&appName=Siddharth").then(() => {
   console.log("mongo db connected successfully");
 });
